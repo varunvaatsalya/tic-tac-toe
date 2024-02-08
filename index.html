@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tic tac toe</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="head_logo">&#8251;</h1>
+      <div class="title">
+        <h1 class="heading">tic <span class="tac">tac</span> toe !</h1>
+      </div>
+      <div class="theme">
+        <button class="theme_btn" type="button">
+          <span class="sun">&#9728;</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mean">
+      <div class="head_svg">
+        <svg
+          class="svg1"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1536"
+          height="89"
+          viewBox="0 0 1536 89"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 76.7687L64 57.8748C128 39.5207 256 2.27274 384 2.27274C512 2.27274 640 34.6623 768 57.8748C896 81.0873 1024 95.6626 1152 85.9457C1280 76.7687 1408 48.6978 1472 34.6623L1536 20.6268V0H1467.5C1403.5 0 1280 0 1152 0C1024 0 901 0 768 0C635 0 512 0 384 0C256 0 116.5 0 52.5 0H0V76.7687Z"
+            fill="#120E43"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="main">
+      <div class="main_content">
+        <div class="about">
+          <div class="you item">
+            <div class="name1 mark" id="you">O</div>
+            <div class="name">YOU</div>
+          </div>
+          <div class="you item">
+            <div class="name12 mark" id="arrow">&#8593;</div>
+            <div class="name middle" id="arrow_name">YOUR TURN</div>
+          </div>
+          <div class="bot item">
+            <div class="name2 mark" id="bot">&#10006;</div>
+            <div class="name">BOT</div>
+          </div>
+        </div>
+        <div class="cont_cover">
+          <div class="container">
+            <!-- <div class="rows"> -->
+            <button
+              class="btn"
+              id="0"
+              type="button"
+              onclick="move(this, huPlayer)"
+            >
+              &#x200B;
+            </button>
+            <button
+              class="btn"
+              id="1"
+              type="button"
+              onclick="move(this, huPlayer)"
+            >
+              &#x200B;
+            </button>
+            <button
+              class="btn"
+              id="2"
+              type="button"
+              onclick="move(this, huPlayer)"
+            >
+              &#x200B;
+            </button>
+            <!-- </div> -->
+            <!-- <div class="rows"> -->
+            <button
+              class="btn"
+              id="3"
+              type="button"
+              onclick="move(this, huPlayer)"
+            >
+              &#x200B;
+            </button>
+            <button
+              class="btn"
+              id="4"
+              type="button"
+              onclick="move(this, huPlayer)"
+            >
+              &#x200B;
+            </button>
+            <button
+              class="btn"
+              id="5"
+              type="button"
+              onclick="move(this, huPlayer)"
+            >
+              &#x200B;
+            </button>
+            <!-- </div> -->
+            <!-- <div class="rows"> -->
+            <button
+              class="btn"
+              id="6"
+              type="button"
+              onclick="move(this, huPlayer)"
+            >
+              &#x200B;
+            </button>
+            <button
+              class="btn"
+              id="7"
+              type="button"
+              onclick="move(this, huPlayer)"
+            >
+              &#x200B;
+            </button>
+            <button
+              class="btn"
+              id="8"
+              type="button"
+              onclick="move(this, huPlayer)"
+            >
+              &#x200B;
+            </button>
+            <!-- </div> -->
+          </div>
+          <div class="introduction" id="intro">
+            <div class="intro_ht">
+            <div class="intro_heading">tic tac toe</div>
+            <div class="intro_ins">
+              <div class="introducing">introducing : </div>
+              <div>
+                <ol>
+                  <li>The Never Winning Game.</li>
+                  <li>
+                    In this game, Your winning Probability is almost negligible.
+                  </li>
+                  <li>
+                    The first turn of the players, and the symbol of the players
+                    are decided by the joker.
+                  </li>
+                  <li>
+                    for the next chance, tap the
+                    <a href="#arrow">repeat</a> button and play continuously.
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="intro_btn"><button class="confirm_btn" type="button" onclick="removeIntro()"><span class="problem1">confirm</span></button></div>
+          </div>
+          </div>
+          <div class="thanks">
+            <div class="na_flex">Special Thanks : <span class="nidhi">Nidhi Agrahari</span></div>
+          </div>
+          <div class="endgame lv" id="11"></div>
+          <div class="endgame mv" id="22"></div>
+          <div class="endgame rv" id="33"></div>
+          <div class="endgame uh" id="44"></div>
+          <div class="endgame mh" id="55"></div>
+          <div class="endgame dh" id="66"></div>
+          <div class="endgame acw" id="77"></div>
+          <div class="endgame cw" id="88"></div>
+          <div class="gameover none"></div>
+          <div class="winner none" id="winner">You wins</div>
+        </div>
+        <div class="sub_heading">
+          <div class="section">
+            <h2 class="score">scores :</h2>
+            <div class="count">
+              <div class="win box">
+                <div class="win">win</div>
+                <div class="win_cnt">0</div>
+              </div>
+              <div class="tie box">
+                <div class="tie">tie</div>
+                <div class="tie_cnt">0</div>
+              </div>
+              <div class="loss box">
+                <div class="loss">bot</div>
+                <div class="loss_cnt">0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="repeat">
+        <button
+          class="rep_btn"
+          id="press_btn"
+          type="button"
+          onclick="NewGame()"
+        >
+          <span class="problem">Repeat</span>
+        </button>
+      </div>
+    </div>
+    <div class="mean1">
+      <div class="foot_svg">
+        <svg width="1536" height="239" viewBox="0 0 1536 239" fill="none">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 222.873L85.76 201.647C170.24 180.421 341.76 137.969 512 148.582C682.24 159.195 853.76 222.873 1024 206.953C1194.24 191.034 1365.76 95.5169 1450.24 47.7584L1536 0V239H1165C1165 239 256 239 85.76 239H0V222.873Z"
+            fill="#120E43"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="up_foot">
+        <i class="instruction">Get connected with us on social networks !</i>
+        <div class="links">
+          <div class="icon">
+            <a
+              href="https://www.instagram.com/varunvaatsalya/"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="80"
+                height="80"
+                viewBox="0 0 24 24"
+                style="fill: #484295"
+              >
+                <path
+                  d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"
+                ></path></svg
+            ></a>
+          </div>
+          <div class="icon">
+            <a
+              href="https://www.linkedin.com/in/varunvaatsalya/"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="80"
+                height="80"
+                viewBox="0 0 24 24"
+                style="fill: #484295"
+              >
+                <path
+                  d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"
+                ></path></svg
+            ></a>
+          </div>
+          <div class="icon">
+            <a
+              href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=varunvaatsalya@gmail.com&tf=1"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="80"
+                height="80"
+                viewBox="0 0 50 50"
+                style="fill: #484295"
+              >
+                <path
+                  d="M12 23.403V23.39 10.389L11.88 10.3h-.01L9.14 8.28C7.47 7.04 5.09 7.1 3.61 8.56 2.62 9.54 2 10.9 2 12.41v3.602L12 23.403zM38 23.39v.013l10-7.391V12.41c0-1.49-.6-2.85-1.58-3.83-1.46-1.457-3.765-1.628-5.424-.403L38.12 10.3 38 10.389V23.39zM14 24.868l10.406 7.692c.353.261.836.261 1.189 0L36 24.868V11.867L25 20l-11-8.133V24.868zM38 25.889V41c0 .552.448 1 1 1h6.5c1.381 0 2.5-1.119 2.5-2.5V18.497L38 25.889zM12 25.889L2 18.497V39.5C2 40.881 3.119 42 4.5 42H11c.552 0 1-.448 1-1V25.889z"
+                ></path></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <b class="bold">&#169; Copyright 2020. All rights reserved.</b>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
