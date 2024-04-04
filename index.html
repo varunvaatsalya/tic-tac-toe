@@ -22,25 +22,21 @@
         </button>
       </div>
     </div>
-
     <div class="mean">
-      <div class="head_svg">
-        <svg
-          class="svg1"
-          xmlns="http://www.w3.org/2000/svg"
-          width="1536"
-          height="89"
-          viewBox="0 0 1536 89"
-          fill="none"
-        >
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M0 76.7687L64 57.8748C128 39.5207 256 2.27274 384 2.27274C512 2.27274 640 34.6623 768 57.8748C896 81.0873 1024 95.6626 1152 85.9457C1280 76.7687 1408 48.6978 1472 34.6623L1536 20.6268V0H1467.5C1403.5 0 1280 0 1152 0C1024 0 901 0 768 0C635 0 512 0 384 0C256 0 116.5 0 52.5 0H0V76.7687Z"
-            fill="#120E43"
-          />
-        </svg>
-      </div>
+      <svg
+        class="svg1"
+        xmlns="http://www.w3.org/2000/svg"
+        width="auto"
+        height="auto"
+        viewBox="0 0 1536 89"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M0 76.7687L64 57.8748C128 39.5207 256 2.27274 384 2.27274C512 2.27274 640 34.6623 768 57.8748C896 81.0873 1024 95.6626 1152 85.9457C1280 76.7687 1408 48.6978 1472 34.6623L1536 20.6268V0H1467.5C1403.5 0 1280 0 1152 0C1024 0 901 0 768 0C635 0 512 0 384 0C256 0 116.5 0 52.5 0H0V76.7687Z"
+          fill="#120E43"
+        />
+      </svg>
     </div>
     <div class="main">
       <div class="main_content">
@@ -141,31 +137,42 @@
           </div>
           <div class="introduction" id="intro">
             <div class="intro_ht">
-            <div class="intro_heading">tic tac toe</div>
-            <div class="intro_ins">
-              <div class="introducing">introducing : </div>
-              <div>
-                <ol>
-                  <li>The Never Winning Game.</li>
-                  <li>
-                    In this game, Your winning Probability is almost negligible.
-                  </li>
-                  <li>
-                    The first turn of the players, and the symbol of the players
-                    are decided by the joker.
-                  </li>
-                  <li>
-                    for the next chance, tap the
-                    <a href="#arrow">repeat</a> button and play continuously.
-                  </li>
-                </ol>
+              <div class="intro_heading">tic tac toe</div>
+              <div class="intro_ins">
+                <div class="introducing">introducing :</div>
+                <div class="instruct">
+                  <ol>
+                    <li>The Never Winning Game.</li>
+                    <li>
+                      In this game, Your winning Probability is almost
+                      negligible.
+                    </li>
+                    <li>
+                      The first turn of the players, and the symbol of the
+                      players are decided by the joker.
+                    </li>
+                    <li>
+                      for the next chance, tap the
+                      <a href="#arrow">repeat</a> button and play continuously.
+                    </li>
+                  </ol>
+                </div>
+              </div>
+              <div class="intro_btn">
+                <button
+                  class="confirm_btn"
+                  type="button"
+                  onclick="removeIntro()"
+                >
+                  <span class="problem1">confirm</span>
+                </button>
               </div>
             </div>
-            <div class="intro_btn"><button class="confirm_btn" type="button" onclick="removeIntro()"><span class="problem1">confirm</span></button></div>
-          </div>
           </div>
           <div class="thanks">
-            <div class="na_flex">Special Thanks : <span class="nidhi">Nidhi Agrahari</span></div>
+            <div class="na_flex">
+              Special Thanks : <span class="nidhi">Nidhi Agrahari</span>
+            </div>
           </div>
           <div class="endgame lv" id="11"></div>
           <div class="endgame mv" id="22"></div>
@@ -179,8 +186,7 @@
           <div class="winner none" id="winner">You wins</div>
         </div>
         <div class="sub_heading">
-          <div class="section">
-            <h2 class="score">scores :</h2>
+            <h2 class="score">scores</h2>
             <div class="count">
               <div class="win box">
                 <div class="win">win</div>
@@ -194,7 +200,6 @@
                 <div class="loss">bot</div>
                 <div class="loss_cnt">0</div>
               </div>
-            </div>
           </div>
         </div>
       </div>
@@ -209,9 +214,9 @@
         </button>
       </div>
     </div>
-    <div class="mean1">
+    <div class="mean2">
       <div class="foot_svg">
-        <svg width="1536" height="239" viewBox="0 0 1536 239" fill="none">
+        <svg class="svg1" width="auto" height="auto" viewBox="0 0 1536 239" fill="none">
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
@@ -221,7 +226,6 @@
         </svg>
       </div>
     </div>
-
     <div class="footer">
       <div class="up_foot">
         <i class="instruction">Get connected with us on social networks !</i>
