@@ -511,7 +511,6 @@ li {
         justify-content: center;
         align-items: center;
         width: 100%;
-        margin-bottom: 20px;
     }
 
     .score {
@@ -583,13 +582,14 @@ li {
 
     .introduction {
         width: 80vw;
-        height: 50vh;
+        height: 65vh;
     }
 
 }
 
 @media screen and (max-width: 750px) {
     .heading {
+        padding-top: 5px;
         font-size: 43px;
     }
 
