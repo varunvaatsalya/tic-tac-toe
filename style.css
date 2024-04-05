@@ -372,22 +372,26 @@ li {
 }
 
 .lv {
-    width: 20px;
-    height: 410px;
+    height: 20px;
+    width: 410px;
     top: auto;
     left: auto;
+    transform: rotate(90deg);
     margin-right: 290px;
 }
 
 .mv {
-    width: 20px;
-    height: 410px;
+    height: 20px;
+    width: 410px;
+    transform: rotate(90deg);
     top: auto;
+    left: auto;
 }
 
 .rv {
-    width: 20px;
-    height: 410px;
+    height: 20px;
+    width: 410px;
+    transform: rotate(90deg);
     top: auto;
     left: auto;
     margin-left: 290px;
@@ -420,15 +424,17 @@ li {
 .acw {
     height: 20px;
     width: 580px;
-    auto: auto;
-    rotate: -45deg;
+    top: auto;
+    left: auto;
+    transform: rotate(45deg);
 }
 
 .cw {
     height: 20px;
     width: 580px;
-    auto: auto;
-    rotate: 45deg;
+    top: auto;
+    left: auto;
+    transform: rotate(-45deg);
 }
 
 .gameover {
@@ -541,16 +547,24 @@ li {
 
     .lv {
         margin-right: 45vw;
-        height: 65%;
+        width: 65%;
+    }
+
+    .mv {
+        width: 65%;
     }
 
     .rv {
         margin-left: 45vw;
-        height: 65%;
+        width: 65%;
     }
 
     .uh {
         margin-bottom: 45vw;
+        width: 65%;
+    }
+
+    .mh {
         width: 65%;
     }
 
@@ -578,6 +592,7 @@ li {
     .instruction {
         padding-left: 10px;
         margin-right: 0px;
+        font-size: 28px;
     }
 
     .introduction {
@@ -628,16 +643,24 @@ li {
 
     .lv {
         margin-right: 54vw;
-        height: 75%;
+        width: 75%;
+    }
+
+    .mv {
+        width: 75%;
     }
 
     .rv {
         margin-left: 54vw;
-        height: 75%;
+        width: 75%;
     }
 
     .uh {
         margin-bottom: 54vw;
+        width: 75%;
+    }
+
+    .mh {
         width: 75%;
     }
 
@@ -657,6 +680,7 @@ li {
     .instruction {
         padding-left: 0px;
         text-align: center;
+        font-size: 20px;
     }
 
     .footer {
