@@ -51,9 +51,9 @@ body {
     font-size: 40px;
 }
 
-/* .theme_btn :hover {
+.theme_btn :hover {
     color: #d7a20e;
-} */
+}
 
 .theme_btn:active {
     color: #d7a20e;
@@ -205,7 +205,9 @@ body {
 }
 
 
-
+.rep_btn:hover {
+    transform: scale(1.03);
+}
 
 .rep_btn:active {
     transform: scale(1.03);
@@ -473,15 +475,6 @@ li {
     .header {
         justify-content: center;
     }
-
-    .about {
-        /* margin: 0px 50px 0px 20px; */
-    }
-    
-    .rep_btn:hover {
-    color: aliceblue;
-    background-color: #725f29;
-}
 }
 
 @media screen and (max-width: 1050px) {
@@ -601,12 +594,6 @@ li {
         width: 80vw;
         height: 65vh;
     }
-    
-    .rep_btn:active {
-    transform: scale(1.03);
-    color: #120E43;
-    box-shadow: 2px 2px 8px black;
-}
 
 }
 
