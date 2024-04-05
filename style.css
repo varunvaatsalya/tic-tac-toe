@@ -55,10 +55,10 @@ body {
     color: #d7a20e;
 }
 
-.theme_btn:active {
+/* .theme_btn:active {
     color: #d7a20e;
     transform: rotatez(15deg);
-}
+} */
 
 .main_content {
     display: flex;
