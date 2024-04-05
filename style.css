@@ -74,7 +74,7 @@ body {
 }
 
 .main {
-    /* display: flex; */
+    overflow: hidden;
     padding-top: 15px;
     background-color: #207398;
 }
@@ -100,6 +100,7 @@ body {
 .mark {
     font-size: 70px;
     color: #F4BE2C;
+    height: 70%;
     font-family: 'Quicksand', 'Ubuntu';
 }
 
@@ -182,34 +183,34 @@ body {
 }
 
 .repeat {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 60px 54px 0px 0px;
+    width: 100%;
 }
 
-.rep_btn,
-.problem {
+.rep_btn {
+    margin: 60px auto;
+    margin-top: 60px;
     height: 65px;
     width: 160px;
     border: none;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     color: #120E43;
+    font-family: 'Merriweather', serif;
     background-color: #d7a20e;
     border-radius: 20px 10px 20px 10px;
     box-shadow: 10px 10px 15px black;
-    font-size: 40px;
+    font-size: 30px;
 }
 
-.rep_btn :hover {
+
+.rep_btn:hover {
     color: aliceblue;
     background-color: #725f29;
 }
 
-.rep_btn :active {
+.rep_btn:active {
     transform: scale(1.03);
     color: #120E43;
     box-shadow: 2px 2px 8px black;
@@ -287,9 +288,10 @@ body {
 
 .introduction {
     position: absolute;
-    height: 60vh;
+    height: 70vh;
     width: 50vw;
     top: 160px;
+    z-index: 4;
     background-color: #F4BE2C;
     border-radius: 8em 4em 16em / 2em 12em;
 }
@@ -321,7 +323,7 @@ body {
     color: #120E43;
 }
 
-.intro_btn {
+.intro_btn1 {
     text-align: center;
     height: 50px;
     display: flex;
@@ -330,8 +332,8 @@ body {
 
 }
 
-.confirm_btn,
-.problem1 {
+.confirm_btn {
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,12 +349,12 @@ body {
     font-size: 20px;
 }
 
-.confirm_btn :hover {
+.confirm_btn:hover {
     color: grey;
     background-color: #29256c;
 }
 
-.confirm_btn :active {
+.confirm_btn:active {
     transform: scale(1.03);
     color: rgb(186, 183, 183);
 }
@@ -372,64 +374,69 @@ li {
 .lv {
     width: 20px;
     height: 410px;
-    top: 200px;
-    left: 37.85%;
+    top: auto;
+    left: auto;
+    margin-right: 290px;
 }
 
 .mv {
     width: 20px;
     height: 410px;
-    top: 200px;
+    top: auto;
 }
 
 .rv {
     width: 20px;
     height: 410px;
-    top: 200px;
-    left: 57%;
+    top: auto;
+    left: auto;
+    margin-left: 290px;
 }
 
 .uh {
     width: 402px;
     height: 20px;
-    top: 250px;
-    left: 35%;
+    top: auto;
+    left: auto;
+    margin-bottom: 290px;
 }
 
 .mh {
     width: 402px;
     height: 20px;
-    top: 395px;
-    left: 35%;
+    top: auto;
+    left: auto;
+
 }
 
 .dh {
     width: 402px;
     height: 20px;
-    top: 538px;
-    left: 35%;
+    top: auto;
+    left: auto;
+    margin-top: 290px;
 }
 
 .acw {
-    width: 20px;
-    height: 580px;
-    top: 115px;
+    height: 20px;
+    width: 580px;
+    auto: auto;
     rotate: -45deg;
 }
 
 .cw {
-    width: 20px;
-    height: 580px;
-    top: 115px;
+    height: 20px;
+    width: 580px;
+    auto: auto;
     rotate: 45deg;
 }
 
 .gameover {
     position: absolute;
-    width: 336px;
-    height: 291px;
-    top: 260px;
-    left: 37%;
+    width: 450px;
+    aspect-ratio: 1/1;
+    top: auto;
+    left: auto;
     border-radius: 15px 40px 15px 40px;
     background-color: #294ccc;
     opacity: .7;
@@ -443,8 +450,8 @@ li {
 .winner {
     font-family: 'Quicksand', cursive, 'Ubuntu';
     position: absolute;
-    top: 360px;
-    left: 40%;
+    top: auto;
+    left: auto;
     color: #F4BE2C;
     font-size: 60px;
 }
@@ -522,10 +529,40 @@ li {
         aspect-ratio: 1/1;
     }
 
+    .gameover {
+        width: 72%;
+        aspect-ratio: 1/1;
+    }
+
     .btn {
         width: 22.4vw;
         aspect-ratio: 1/1;
         font-size: 8rem;
+    }
+
+    .lv {
+        margin-right: 45vw;
+        height: 65%;
+    }
+
+    .rv {
+        margin-left: 45vw;
+        height: 65%;
+    }
+
+    .uh {
+        margin-bottom: 45vw;
+        width: 65%;
+    }
+
+    .dh {
+        margin-top: 45vw;
+        width: 65%;
+    }
+
+    .acw,
+    .cw {
+        width: 88%;
     }
 
 
@@ -538,50 +575,99 @@ li {
     .name12 {
         transform: rotate(-90deg);
     }
-    .instruction{
+
+    .instruction {
         padding-left: 10px;
         margin-right: 0px;
     }
-    .introduction{
+
+    .introduction {
         width: 80vw;
+        height: 50vh;
     }
 
 }
 
 @media screen and (max-width: 750px) {
-    .score{
+    .heading {
+        font-size: 43px;
+    }
+
+    .score {
         display: none;
     }
-    .count{
+
+    .count {
         width: 90%;
     }
-    .box{
-        height: 110px;
-        width: 120px;
+
+    .box {
+        transform: scale(.85);
     }
-    .cont_cover{
+
+    .win_cnt,
+    .tie_cnt,
+    .loss_cnt {
+        margin-top: -5px;
+    }
+
+    .cont_cover {
         width: 95%;
         box-shadow: none;
     }
+
+    .gameover {
+        width: 85%;
+    }
+
     .btn {
         width: 26.6vw;
         aspect-ratio: 1/1;
         font-size: 5rem;
     }
-    .item{
+
+    .lv {
+        margin-right: 54vw;
+        height: 75%;
+    }
+
+    .rv {
+        margin-left: 54vw;
+        height: 75%;
+    }
+
+    .uh {
+        margin-bottom: 54vw;
+        width: 75%;
+    }
+
+    .dh {
+        margin-top: 54vw;
+        width: 75%;
+    }
+
+    .item {
         transform: scale(.85);
     }
-    .up_foot{
+
+    .up_foot {
         flex-direction: column;
     }
-    .instruction{
+
+    .instruction {
         padding-left: 0px;
         text-align: center;
     }
-    .footer{
+
+    .footer {
         height: 33vh;
     }
-    .introduction{
+
+    .introduction {
         width: 96vw;
+    }
+
+    .name {
+        font-size: 15px;
     }
 }
