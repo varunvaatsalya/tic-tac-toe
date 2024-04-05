@@ -519,6 +519,7 @@ li {
 
     .cont_cover {
         width: 80%;
+        aspect-ratio: 1/1;
     }
 
     .btn {
@@ -537,11 +538,50 @@ li {
     .name12 {
         transform: rotate(-90deg);
     }
+    .instruction{
+        padding-left: 10px;
+        margin-right: 0px;
+    }
+    .introduction{
+        width: 80vw;
+    }
 
 }
 
-@media screen and (max-width: 850px) {
-    .introducing {
-        font-size: 30px;
+@media screen and (max-width: 750px) {
+    .score{
+        display: none;
+    }
+    .count{
+        width: 90%;
+    }
+    .box{
+        height: 110px;
+        width: 120px;
+    }
+    .cont_cover{
+        width: 95%;
+        box-shadow: none;
+    }
+    .btn {
+        width: 26.6vw;
+        aspect-ratio: 1/1;
+        font-size: 5rem;
+    }
+    .item{
+        transform: scale(.85);
+    }
+    .up_foot{
+        flex-direction: column;
+    }
+    .instruction{
+        padding-left: 0px;
+        text-align: center;
+    }
+    .footer{
+        height: 33vh;
+    }
+    .introduction{
+        width: 96vw;
     }
 }
