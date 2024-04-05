@@ -599,6 +599,12 @@ li {
         width: 80vw;
         height: 65vh;
     }
+    
+    .rep_btn:active {
+    transform: scale(1.03);
+    color: #120E43;
+    box-shadow: 2px 2px 8px black;
+}
 
 }
 
