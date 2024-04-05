@@ -158,14 +158,8 @@
                   </ol>
                 </div>
               </div>
-              <div class="intro_btn">
-                <button
-                  class="confirm_btn"
-                  type="button"
-                  onclick="removeIntro()"
-                >
-                  <span class="problem1">confirm</span>
-                </button>
+              <div class="confirm_btn" type="button" onclick="removeIntro()">
+                Confirm
               </div>
             </div>
           </div>
@@ -186,37 +180,39 @@
           <div class="winner none" id="winner">You wins</div>
         </div>
         <div class="sub_heading">
-            <h2 class="score">scores</h2>
-            <div class="count">
-              <div class="win box">
-                <div class="win">win</div>
-                <div class="win_cnt">0</div>
-              </div>
-              <div class="tie box">
-                <div class="tie">tie</div>
-                <div class="tie_cnt">0</div>
-              </div>
-              <div class="loss box">
-                <div class="loss">bot</div>
-                <div class="loss_cnt">0</div>
-              </div>
+          <h2 class="score">scores</h2>
+          <div class="count">
+            <div class="win box">
+              <div class="win">win</div>
+              <div class="win_cnt">0</div>
+            </div>
+            <div class="tie box">
+              <div class="tie">tie</div>
+              <div class="tie_cnt">0</div>
+            </div>
+            <div class="loss box">
+              <div class="loss">bot</div>
+              <div class="loss_cnt">0</div>
+            </div>
           </div>
         </div>
       </div>
       <div class="repeat">
-        <button
-          class="rep_btn"
-          id="press_btn"
-          type="button"
-          onclick="NewGame()"
-        >
-          <span class="problem">Repeat</span>
-        </button>
+        <div class="rep_btn" id="press_btn" type="button" onclick="NewGame()">
+          Repeat
+          <!-- <span class="problem">Repeat</span> -->
+        </div>
       </div>
     </div>
     <div class="mean2">
       <div class="foot_svg">
-        <svg class="svg1" width="auto" height="auto" viewBox="0 0 1536 239" fill="none">
+        <svg
+          class="svg1"
+          width="auto"
+          height="auto"
+          viewBox="0 0 1536 239"
+          fill="none"
+        >
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
